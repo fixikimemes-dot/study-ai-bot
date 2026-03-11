@@ -1,1 +1,1 @@
-"""Study tracker Telegram bot package."""
+FROM PYTHON 3.10
