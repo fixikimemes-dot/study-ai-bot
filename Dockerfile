@@ -8,10 +8,8 @@ ENV PYTHONUNBUFFERED=1
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY bot ./bot
-COPY .env.example ./
-COPY README.md ./
+COPY . .
 
 RUN mkdir -p /app/data /app/exports
 
-CMD ["python", "-m", "bot.main"]
+CMD ["python", "main.py"]
