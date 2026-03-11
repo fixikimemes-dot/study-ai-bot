@@ -1,0 +1,9 @@
+TELEGRAM_BOT_TOKEN=123456:your_telegram_bot_token
+OPENAI_API_KEY=sk-your-openai-key
+OPENAI_MODEL=gpt-5-mini
+DB_PATH=data/study_tracker.db
+EXPORT_DIR=exports
+DEFAULT_TIMEZONE=Europe/Amsterdam
+DEFAULT_MORNING_TIME=08:00
+DEFAULT_MIDDAY_TIME=14:00
+DEFAULT_EVENING_TIME=20:30
