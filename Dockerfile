@@ -1,9 +1,17 @@
-FROM python:3.10
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY . .
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "bot/main.py"]
+COPY bot ./bot
+COPY .env.example ./
+COPY README.md ./
+
+RUN mkdir -p /app/data /app/exports
+
+CMD ["python", "-m", "bot.main"]
